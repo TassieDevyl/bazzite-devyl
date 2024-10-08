@@ -6,7 +6,7 @@
 
 Name:           gamescope
 Version:        100.%{gamescope_tag}
-Release:        2.bazzite
+Release:        4.bazzite
 Summary:        Micro-compositor for video games on Wayland
 
 License:        BSD
@@ -22,13 +22,19 @@ Patch1:         chimeraos.patch
 
 # https://hhd.dev/
 Patch2:         disable-steam-touch-click-atom.patch
-Patch3:         v2-0001-always-send-ctrl-1-2-to-steam-s-wayland-session.patch
+Patch3:         v2-0001-steam-overlay-hotkeys.patch
 
 # https://github.com/ValveSoftware/gamescope/issues/1369
 Patch4:         revert-299bc34.patch
 
 # https://github.com/ValveSoftware/gamescope/pull/1231
 Patch5:         1231.patch
+
+# https://github.com/ValveSoftware/gamescope/commit/b288a82a61005b91dd268b8ea4e8d124d4dd5267
+Patch6:         ally-display.patch
+
+# https://github.com/ValveSoftware/gamescope/pull/740
+Patch7:         740.patch
 
 BuildRequires:  meson >= 0.54.0
 BuildRequires:  ninja-build
